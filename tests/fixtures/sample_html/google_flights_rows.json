@@ -1,0 +1,11 @@
+{
+  "_source": "Captured via page.locator('li.pIav2d').inner_text() during the Phase 1 recon spike against a real JFK->LAX Google Flights search, 2026-07-28. See docs/recon_notes.md.",
+  "round_trip_rows": [
+    "8:30 AM\n – \n11:28 AM\nJetBlue\n5 hr 58 min\nJFK–LAX\nNonstop\n416 kg CO2e\n+28% emissions\n1\n0\n$351\nround trip",
+    "6:00 AM\n – \n8:59 AM\nAmerican\n5 hr 59 min\nJFK–LAX\nNonstop\n321 kg CO2e\nAvg emissions\n1\n0\n$367\nround trip",
+    "7:29 AM\n – \n10:31 AM\nAmerican\n6 hr 2 min\nJFK–LAX\nNonstop\n552 kg CO2e\n+70% emissions\n1\n0\n$367\nround trip"
+  ],
+  "one_way_rows": [
+    "8:30 AM\n – \n11:28 AM\nJetBlue\n5 hr 58 min\nJFK–LAX\nNonstop\n416 kg CO2e\n+28% emissions\n1\n0\n$189"
+  ]
+}

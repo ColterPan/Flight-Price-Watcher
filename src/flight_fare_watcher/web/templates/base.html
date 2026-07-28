@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Flight Fare Watcher{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Flight Fare Watcher</a>
+    <nav>
+      <a href="/">Search</a>
+      <a href="/watches">Watched Routes</a>
+    </nav>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <p>Personal use only - scrapes Google Flights. See the README for the Terms of Service disclaimer.</p>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
