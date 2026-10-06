@@ -1,29 +1,37 @@
 # Flight Fare Watcher
 
-A personal, locally-run tool that searches a small set of flight booking
-sites for a given route, shows you the cheapest fare it finds with a link to
-buy it, and can watch a saved route in the background and email you when the
+A personal, locally-run tool that searches for flights across multiple fare
+sources, shows you the cheapest ones with a link to buy the exact flight you
+picked, and can watch a saved route in the background and email you when the
 price drops.
 
-> **This is not a Skyscanner clone.** It scrapes two sites (Google Flights and
-> Kiwi.com) with Playwright — it does not aggregate "every site," and it does
-> not use any flight-data APIs. See [Limitations & Terms of Service](#limitations--terms-of-service)
+> **This is not a Skyscanner clone.** One of its three fare sources (Google
+> Flights) works by scraping a real page with Playwright — it does not
+> aggregate "every site." See [Limitations & Terms of Service](#limitations--terms-of-service)
 > before using it.
-
-## Status
-
-Under active development. See [docs/architecture.md](docs/architecture.md)
-for the current design and build phases.
 
 ## Overview
 
-- **On-demand search**: enter an origin, destination, and dates; the tool
-  searches Google Flights and Kiwi.com concurrently and returns the cheapest
-  fares found, each with a deep link to the site where you'd actually buy the
-  ticket.
-- **Watch & alert**: save a route with a target price. A background job
-  re-checks it periodically (default every 4 hours) and emails you when a new
-  low fare appears at or below your target.
+- **On-demand search**: enter an origin, destination, dates, passenger count,
+  cabin, and a stops limit. The tool queries every enabled fare source
+  concurrently and returns the cheapest results, each showing real itinerary
+  detail (times, duration, stops, layovers, bags) rather than a bare price.
+- **A real link to the flight you picked** - not just a link back to a search
+  page. For the cheapest few results this is resolved automatically; any other
+  result can get one on demand with "Get direct link."
+- **Three fare providers**, mix and match via `ENABLED_SITES`:
+  - `google_flights` - live prices scraped from the real site (Playwright).
+  - `amadeus` - the [Amadeus Self-Service Flight Offers Search API](https://developers.amadeus.com)
+    (free tier available; set `AMADEUS_API_KEY`/`AMADEUS_API_SECRET`).
+  - `demo` - deterministic synthetic fares with no network or browser at all,
+    useful for trying the whole app with zero setup.
+- **Watch & alert**: save a route (with passengers/cabin/stops options) and an
+  optional target price. A background job re-checks it periodically (default
+  every 4 hours) and emails you when a new low fare appears at or below your
+  target. Use "Check now" to test a watch immediately instead of waiting, and
+  "Show price history" for a quick chart of what it has seen.
+- **Airport autocomplete**: type a city name, pick the airport - no need to
+  already know IATA codes.
 - **Local only**: runs on your own machine via `uvicorn`. Nothing is hosted,
   nothing is multi-user.
 
@@ -41,8 +49,23 @@ playwright install chromium
 
 copy .env.example .env          # Windows
 # cp .env.example .env          # macOS/Linux
-# then edit .env with your real SMTP credentials
+# then edit .env - see "Configuration" below
 ```
+
+## Configuration
+
+Edit `.env` (see `.env.example` for every option with comments). The only
+provider enabled by default is `google_flights`, which needs no API key.
+
+- **Try it with zero setup**: set `ENABLED_SITES=demo` to use synthetic fares,
+  or `ENABLED_SITES=demo,google_flights` to see both side by side.
+- **Email alerts**: fill in `SMTP_*`/`ALERT_*` to let watches actually send
+  mail. Without this, watches still track price history and the UI still
+  shows what they found - they just can't notify you.
+- **Amadeus**: add `amadeus` to `ENABLED_SITES` and set
+  `AMADEUS_API_KEY`/`AMADEUS_API_SECRET` (free tier at
+  [developers.amadeus.com](https://developers.amadeus.com)). Until configured
+  it reports its status as "not set up" rather than failing.
 
 ## Usage
 
@@ -50,7 +73,7 @@ copy .env.example .env          # Windows
 uvicorn flight_fare_watcher.main:app
 ```
 
-Then open http://127.0.0.1:8000 in a browser to search for flights or manage
+Then open <http://127.0.0.1:8000> in a browser to search for flights or manage
 watched routes.
 
 > **Windows: do not add `--reload`.** Uvicorn's `--reload` runs the server
@@ -64,9 +87,9 @@ watched routes.
 
 ## Architecture
 
-See [docs/architecture.md](docs/architecture.md) for the full design:
-scraper adapters, the search orchestrator, the watch/alert scheduler, and the
-data model.
+See [docs/architecture.md](docs/architecture.md) for the full design: the
+provider contract, the search orchestrator and its result cache, booking-link
+resolution, the watch/alert scheduler, and the data model.
 
 ## Testing
 
@@ -74,27 +97,31 @@ data model.
 pytest
 ```
 
-Unit and integration tests run against mocked scrapers and an in-memory
+Unit and integration tests run against mocked providers and an in-memory
 database — no live network access, so they're safe to run repeatedly and in
-CI. A separate `tests/live_smoke/` suite exists for manually verifying a real
-site still scrapes correctly; it is **not** run automatically. See
-[docs/architecture.md](docs/architecture.md#testing) for details.
+CI. A separate `tests/live_smoke/` suite exists for manually verifying the
+real Google Flights site still scrapes (and books) correctly; it is **not**
+run automatically. See [docs/architecture.md](docs/architecture.md#testing)
+for details.
 
 ## Limitations & Terms of Service
 
-This tool works by automating a browser (Playwright) to load public pages on
-third-party websites and read the fares those pages display. That commonly
-conflicts with those sites' Terms of Service, which typically prohibit
-automated access. This project is intended strictly for **personal,
-non-commercial, low-frequency, educational use** by whoever runs it — not for
-redistribution, not for hosting as a service, and not for high-frequency or
-bulk use. Anyone using this code is responsible for how they use it.
+The `google_flights` provider works by automating a browser (Playwright) to
+load public pages on a third-party website and read the fares that page
+displays. That commonly conflicts with that site's Terms of Service, which
+typically prohibits automated access. This project is intended strictly for
+**personal, non-commercial, low-frequency, educational use** by whoever runs
+it — not for redistribution, not for hosting as a service, and not for
+high-frequency or bulk use. Anyone using this code is responsible for how
+they use it. The `amadeus` and `demo` providers do not scrape anything.
 
-Scraper adapters will break when a target site changes its page structure.
-This is treated as an expected condition, not a bug: the tool distinguishes
-"no flights found" from "the scraper appears to be blocked or the page
-structure changed" in its logs and UI, rather than silently returning wrong
-data.
+The Google Flights adapter will break when the site changes its page
+structure. This is treated as an expected condition, not a bug: the tool
+distinguishes "no flights found" from "the provider appears to be blocked or
+the page structure changed" from "this provider isn't configured" in its logs
+and UI, rather than silently returning wrong data. See
+[docs/recon_notes.md](docs/recon_notes.md) for what the parser is built
+against and `scripts/capture_google_flights_fixture.py` to re-verify it.
 
 ## License
 

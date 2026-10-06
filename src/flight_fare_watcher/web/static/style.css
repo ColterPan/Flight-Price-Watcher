@@ -1,19 +1,81 @@
 :root {
   color-scheme: light dark;
+  --bg: #ffffff;
+  --surface: #f8fafc;
   --border: #d0d5dd;
+  --text: #1a1f29;
   --muted: #667085;
   --accent: #2563eb;
+  --accent-contrast: #ffffff;
   --danger: #b42318;
+  --danger-bg: #fef3f2;
   --ok: #067647;
+  --ok-bg: #ecfdf3;
+  --warn: #93650c;
+  --warn-bg: #fffaeb;
+  --info-bg: #eff8ff;
+  --info-text: #175cd3;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1420;
+    --surface: #161c2c;
+    --border: #2a3245;
+    --text: #e7eaf0;
+    --muted: #8b95a7;
+    --accent: #5b8def;
+    --accent-contrast: #0f1420;
+    --danger: #ff8a7a;
+    --danger-bg: #2a1716;
+    --ok: #5fd99a;
+    --ok-bg: #112219;
+    --warn: #f0c050;
+    --warn-bg: #241c0c;
+    --info-bg: #10233b;
+    --info-text: #8ec0ff;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1420;
+  --surface: #161c2c;
+  --border: #2a3245;
+  --text: #e7eaf0;
+  --muted: #8b95a7;
+  --accent: #5b8def;
+  --accent-contrast: #0f1420;
+  --danger: #ff8a7a;
+  --danger-bg: #2a1716;
+  --ok: #5fd99a;
+  --ok-bg: #112219;
+  --warn: #f0c050;
+  --warn-bg: #241c0c;
+  --info-bg: #10233b;
+  --info-text: #8ec0ff;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 * { box-sizing: border-box; }
+
+/* A `display` rule on the same element as the `hidden` attribute (e.g.
+   `.results-toolbar { display: flex }`) ties the browser's default
+   `[hidden] { display: none }` rule on specificity, and the later-loaded
+   author rule wins - silently un-hiding the element. Force it explicitly
+   rather than relying on attribute/class ordering. */
+[hidden] { display: none !important; }
 
 body {
   font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
   margin: 0;
   line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
 }
+
+a { color: var(--accent); }
 
 .site-header {
   display: flex;
@@ -21,110 +83,189 @@ body {
   gap: 1.5rem;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
 }
 
 .site-header .brand {
   font-weight: 700;
   text-decoration: none;
   color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
+
+.brand-mark { font-size: 1.1rem; }
 
 .site-header nav a {
   margin-right: 1rem;
   text-decoration: none;
+  color: var(--muted);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header nav a.active {
   color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.provider-strip {
+  margin-left: auto;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.provider-pill {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: help;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 1.5rem;
 }
 
 .site-footer {
-  max-width: 900px;
+  max-width: 920px;
   margin: 2rem auto;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 2rem;
   color: var(--muted);
   font-size: 0.85rem;
 }
 
+h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+
 .card {
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1.1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
 }
 
 .field-row {
   display: flex;
   gap: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .field-row label {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  font-size: 0.9rem;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--muted);
   flex: 1;
-  min-width: 160px;
+  min-width: 150px;
 }
 
-input {
-  padding: 0.5rem;
+input, select {
+  padding: 0.55rem 0.6rem;
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+}
+
+input:focus, select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 button {
   background: var(--accent);
-  color: white;
+  color: var(--accent-contrast);
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-button.secondary {
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+button.secondary, button.primary.secondary {
   background: transparent;
   color: var(--accent);
   border: 1px solid var(--accent);
-  padding: 0.3rem 0.7rem;
-  font-size: 0.85rem;
 }
 
 button.danger {
   background: transparent;
   color: var(--danger);
   border: 1px solid var(--danger);
-  padding: 0.3rem 0.7rem;
+  padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
 }
 
-table.results {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
+button.watch-button {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
-table.results th, table.results td {
-  text-align: left;
-  padding: 0.6rem 0.5rem;
-  border-bottom: 1px solid var(--border);
+button.link-button, .link-button {
+  background: none;
+  color: var(--accent);
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: underline;
+  align-self: flex-start;
+}
+
+.icon-button {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
+  font-size: 1.1rem;
+  align-self: center;
+  margin-bottom: 0.3rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
 }
 
 .status {
   padding: 0.6rem 0.8rem;
   border-radius: 6px;
   margin: 0.75rem 0;
+  font-size: 0.9rem;
 }
 
-.status.info { background: #eff8ff; color: #175cd3; }
-.status.error { background: #fef3f2; color: var(--danger); }
+.status.info { background: var(--info-bg); color: var(--info-text); }
+.status.error { background: var(--danger-bg); color: var(--danger); }
+
+.empty-state {
+  color: var(--muted);
+  padding: 2rem 1rem;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+}
 
 .site-statuses {
   display: flex;
@@ -134,13 +275,226 @@ table.results th, table.results td {
 }
 
 .site-status-pill {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
   border: 1px solid var(--border);
+  color: var(--muted);
 }
 
-.site-status-pill.ok { color: var(--ok); border-color: var(--ok); }
+.site-status-pill.ok { color: var(--ok); border-color: var(--ok); background: var(--ok-bg); }
 .site-status-pill.no_results { color: var(--muted); }
+.site-status-pill.not_configured { color: var(--warn); border-color: var(--warn); background: var(--warn-bg); }
 .site-status-pill.blocked_or_structure_changed,
-.site-status-pill.error { color: var(--danger); border-color: var(--danger); }
+.site-status-pill.error { color: var(--danger); border-color: var(--danger); background: var(--danger-bg); }
+
+/* --- Autocomplete --- */
+
+.autocomplete-field { position: relative; }
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  z-index: 20;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.suggestion-row {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.suggestion-row:hover, .suggestion-row.active {
+  background: var(--surface);
+}
+
+/* --- Results toolbar --- */
+
+.results-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.75rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-control select { padding: 0.35rem 0.5rem; font-size: 0.85rem; }
+
+/* --- Fare cards --- */
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fare-card {
+  display: grid;
+  grid-template-columns: 7rem 1fr 11rem;
+  gap: 1rem;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.fare-price-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fare-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.fare-site-badge {
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  width: fit-content;
+}
+
+.fare-site-badge.demo {
+  color: var(--warn);
+  border-color: var(--warn);
+  background: var(--warn-bg);
+}
+
+.fare-detail-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.fare-airline-row { font-weight: 600; }
+.fare-operated-by { font-weight: 400; color: var(--muted); font-size: 0.85rem; }
+
+.fare-time-row { color: var(--text); font-size: 0.92rem; }
+.fare-duration, .fare-stops { color: var(--muted); }
+.fare-stops.nonstop { color: var(--ok); }
+
+.fare-layover-row, .fare-bags-row {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.fare-action-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.fare-action-col .secondary-link {
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+/* --- Watch cards --- */
+
+.watches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.watch-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.watch-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watch-route { font-weight: 700; font-size: 1.05rem; }
+
+.watch-meta, .watch-price-row {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 0.3rem;
+}
+
+.watch-price-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.watch-target { color: var(--text); }
+
+.watch-status-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.watch-status-badge {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.watch-status-badge.ok { color: var(--ok); border-color: var(--ok); background: var(--ok-bg); }
+.watch-status-badge.error,
+.watch-status-badge.all_providers_failing { color: var(--danger); border-color: var(--danger); background: var(--danger-bg); }
+.watch-checked-at { color: var(--muted); }
+
+.watch-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.watch-history {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.sparkline { width: 100%; max-width: 320px; height: 64px; color: var(--accent); }
+.sparkline-line { fill: none; stroke: currentColor; stroke-width: 2; }
+.sparkline-dot { fill: currentColor; }
+.sparkline-empty-text { fill: var(--muted); font-size: 11px; }
+
+.history-summary {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 640px) {
+  .fare-card {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .fare-action-col { flex-direction: row; flex-wrap: wrap; }
+  .provider-strip { margin-left: 0; }
+}

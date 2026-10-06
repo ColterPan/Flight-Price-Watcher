@@ -1,16 +1,28 @@
-"""Shared Playwright helpers and the adapter interface every scraper implements."""
+"""Shared Playwright helpers and the adapter interface every provider implements.
+
+"Provider" covers both kinds of fare source:
+
+* **Browser adapters** (`google_flights.py`) drive a real page with Playwright.
+* **API adapters** (`amadeus_api.py`, `demo_provider.py`) call an HTTP API or
+  return canned data and ignore the `BrowserContext` they are handed.
+
+Both satisfy the same `FlightSiteAdapter` contract, so the orchestrator, the
+registry and the scheduler do not care which kind they are talking to. The
+package is still called `scrapers` for historical reasons; the contract itself
+is source-agnostic.
+"""
 
 from __future__ import annotations
 
 import abc
 import asyncio
 import random
-from datetime import date
 from typing import Awaitable, Callable, TypeVar
 
 from playwright.async_api import Browser, BrowserContext
 
-from flight_fare_watcher.models.fare import ScrapeOutcome
+from flight_fare_watcher.models.fare import FareResult, ScrapeOutcome
+from flight_fare_watcher.models.search import SearchQuery
 
 DESKTOP_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -61,17 +73,31 @@ async def with_retry(
 
 
 class FlightSiteAdapter(abc.ABC):
-    """One adapter per scraped site. Must never let an exception escape `search`."""
+    """One adapter per fare source. Must never let an exception escape `search`."""
 
     site_name: str
 
+    #: Whether this provider needs the shared Playwright browser. API adapters
+    #: set this to False so the orchestrator can skip building a context for
+    #: them - and skip launching a browser at all when no provider needs one.
+    needs_browser: bool = True
+
     @abc.abstractmethod
-    async def search(
-        self,
-        origin: str,
-        destination: str,
-        depart_date: date,
-        return_date: date | None,
-        context: BrowserContext,
-    ) -> ScrapeOutcome:
+    async def search(self, query: SearchQuery, context: BrowserContext | None) -> ScrapeOutcome:
+        """Find fares for `query`. Returns a `ScrapeOutcome`, never raises."""
         raise NotImplementedError
+
+    async def resolve_booking_url(
+        self,
+        query: SearchQuery,
+        fare: FareResult,
+        context: BrowserContext | None,
+    ) -> str | None:
+        """Resolve a link to this specific itinerary's purchase page, if possible.
+
+        The default is `None`, meaning "this provider has no per-fare link
+        beyond the `deep_link` already on the fare". Returning `None` is always
+        acceptable and must never raise - a missing booking link degrades the
+        UI to a search link, it does not fail the search.
+        """
+        return None

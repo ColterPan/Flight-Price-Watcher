@@ -2,46 +2,78 @@
 {% block title %}Search - Flight Fare Watcher{% endblock %}
 {% block content %}
   <h1>Search flights</h1>
-  <form id="search-form" class="card">
+  <form id="search-form" class="card" autocomplete="off">
     <div class="field-row">
-      <label>
-        From (IATA code)
-        <input type="text" id="origin" maxlength="3" placeholder="JFK" required>
+      <label class="autocomplete-field">
+        From
+        <input type="text" id="origin" placeholder="City or airport code" required>
+        <div class="suggestions" id="origin-suggestions" hidden></div>
       </label>
-      <label>
-        To (IATA code)
-        <input type="text" id="destination" maxlength="3" placeholder="LAX" required>
+      <button type="button" id="swap-airports" class="icon-button" title="Swap origin and destination" aria-label="Swap origin and destination">&#8646;</button>
+      <label class="autocomplete-field">
+        To
+        <input type="text" id="destination" placeholder="City or airport code" required>
+        <div class="suggestions" id="destination-suggestions" hidden></div>
       </label>
     </div>
     <div class="field-row">
       <label>
         Depart date
-        <input type="date" id="depart_date" required>
+        <input type="date" id="depart_date" min="{{ min_date }}" value="{{ default_depart_date }}" required>
       </label>
       <label>
         Return date (optional)
-        <input type="date" id="return_date">
+        <input type="date" id="return_date" min="{{ min_date }}">
+      </label>
+      <button type="button" id="clear-return" class="link-button">One way</button>
+    </div>
+    <div class="field-row">
+      <label>
+        Passengers
+        <input type="number" id="adults" min="1" max="9" value="1">
+      </label>
+      <label>
+        Cabin
+        <select id="cabin">
+          {% for value, display in cabin_labels.items() %}
+          <option value="{{ value }}">{{ display }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>
+        Stops
+        <select id="max_stops">
+          <option value="">Any</option>
+          <option value="0">Nonstop only</option>
+          <option value="1">1 stop or fewer</option>
+          <option value="2">2 stops or fewer</option>
+        </select>
       </label>
     </div>
-    <button type="submit">Search</button>
+    <div class="form-actions">
+      <button type="submit" id="search-submit">Search flights</button>
+      <button type="button" id="search-refresh" class="secondary" hidden>Refresh prices</button>
+    </div>
   </form>
 
-  <div id="search-status" class="status" hidden></div>
+  <div id="search-status" class="status" hidden role="status"></div>
   <div id="site-statuses" class="site-statuses"></div>
 
-  <table id="results-table" class="results" hidden>
-    <thead>
-      <tr>
-        <th>Price</th>
-        <th>Airline</th>
-        <th>Site</th>
-        <th>Book</th>
-        <th>Watch this route</th>
-      </tr>
-    </thead>
-    <tbody id="results-body"></tbody>
-  </table>
+  <div id="results-toolbar" class="results-toolbar" hidden>
+    <span id="results-count"></span>
+    <label class="sort-control">
+      Sort by
+      <select id="sort-by">
+        <option value="price">Price (lowest first)</option>
+        <option value="duration">Duration (shortest first)</option>
+        <option value="depart">Departure time</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="results-list" class="results-list"></div>
+  <p id="results-empty" class="empty-state" hidden>No fares found for that route and dates. Try different dates or fewer stops.</p>
 {% endblock %}
 {% block scripts %}
-  <script src="/static/app.js"></script>
+  <script src="/static/search.js"></script>
 {% endblock %}

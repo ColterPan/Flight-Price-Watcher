@@ -1,0 +1,552 @@
+{
+ "JFK_LAX_rt": {
+  "title": "New York to Los Angeles | Google Flights",
+  "rows": [
+   {
+    "visible": true,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 6:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 9:22 AM on Friday, November 20. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "6:00 AM\n – \n9:22 AM\nAmerican\n6 hr 22 min\nJFK–LAX\nNonstop\n274 kg CO2e\n-14% emissions\n1\n0\n$409\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 6:10 AM on Friday, November 20 and arrives at Los Angeles International Airport at 9:25 AM on Friday, November 20. Total duration 6 hr 15 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "6:10 AM\n – \n9:25 AM\nJetBlue\n6 hr 15 min\nJFK–LAX\nNonstop\n374 kg CO2e\n+17% emissions\n1\n0\n$409\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 7:29 AM on Friday, November 20 and arrives at Los Angeles International Airport at 10:57 AM on Friday, November 20. Total duration 6 hr 28 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "7:29 AM\n – \n10:57 AM\nAmerican\n6 hr 28 min\nJFK–LAX\nNonstop\n319 kg CO2e\nAvg emissions\n1\n0\n$409\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 9:27 PM on Friday, November 20 and arrives at Los Angeles International Airport at 12:49 AM on Saturday, November 21. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "9:27 PM\n – \n12:49 AM+1\nAmerican\n6 hr 22 min\nJFK–LAX\nNonstop\n274 kg CO2e\n-14% emissions\n1\n0\n$409\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 9:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 1:02 AM on Saturday, November 21. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "9:40 PM\n – \n1:02 AM+1\nJetBlue\n6 hr 22 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$409\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 449 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 9:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 12:18 PM on Friday, November 20. Total duration 6 hr 18 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "9:00 AM\n – \n12:18 PM\nAmerican\n6 hr 18 min\nJFK–LAX\nNonstop\n280 kg CO2e\n-13% emissions\n1\n0\n$449\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 449 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 6:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 9:25 PM on Friday, November 20. Total duration 6 hr 25 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "6:00 PM\n – \n9:25 PM\nAmerican\n6 hr 25 min\nJFK–LAX\nNonstop\n319 kg CO2e\nAvg emissions\n1\n0\n$449\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 449 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 7:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 10:22 PM on Friday, November 20. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "7:00 PM\n – \n10:22 PM\nAmerican\n6 hr 22 min\nJFK–LAX\nNonstop\n274 kg CO2e\n-14% emissions\n1\n0\n$449\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 474 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 8:55 PM on Friday, November 20 and arrives at Los Angeles International Airport at 12:16 AM on Saturday, November 21. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "8:55 PM\n – \n12:16 AM+1\nDelta\n6 hr 21 min\nJFK–LAX\nNonstop\n240 kg CO2e\n-25% emissions\n1\n0\n$474\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 7:10 AM on Friday, November 20 and arrives at Los Angeles International Airport at 10:30 AM on Friday, November 20. Total duration 6 hr 20 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "7:10 AM\n – \n10:30 AM\nJetBlue\n6 hr 20 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$478\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 8:25 AM on Friday, November 20 and arrives at Los Angeles International Airport at 11:50 AM on Friday, November 20. Total duration 6 hr 25 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "8:25 AM\n – \n11:50 AM\nJetBlue\n6 hr 25 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$478\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 9:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 12:51 PM on Friday, November 20. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "9:30 AM\n – \n12:51 PM\nJetBlue\n6 hr 21 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$478\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 7:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 11:04 PM on Friday, November 20. Total duration 6 hr 24 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "7:40 PM\n – \n11:04 PM\nJetBlue\n6 hr 24 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$478\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 8:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 11:59 PM on Friday, November 20. Total duration 6 hr 19 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "8:40 PM\n – \n11:59 PM\nJetBlue\n6 hr 19 min\nJFK–LAX\nNonstop\n411 kg CO2e\n+28% emissions\n1\n0\n$478\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 508 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 2:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 5:18 PM on Friday, November 20. Total duration 6 hr 18 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "2:00 PM\n – \n5:18 PM\nJetBlue\n6 hr 18 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$508\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 508 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 5:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 9:00 PM on Friday, November 20. Total duration 6 hr 20 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "5:40 PM\n – \n9:00 PM\nJetBlue\n6 hr 20 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$508\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 538 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 10:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 1:49 PM on Friday, November 20. Total duration 6 hr 19 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "10:30 AM\n – \n1:49 PM\nJetBlue\n6 hr 19 min\nJFK–LAX\nNonstop\n374 kg CO2e\n+17% emissions\n1\n0\n$538\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 538 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 11:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 2:50 PM on Friday, November 20. Total duration 6 hr 20 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "11:30 AM\n – \n2:50 PM\nJetBlue\n6 hr 20 min\nJFK–LAX\nNonstop\n414 kg CO2e\n+29% emissions\n1\n0\n$538\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 539 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 3:20 PM on Friday, November 20 and arrives at Los Angeles International Airport at 6:33 PM on Friday, November 20. Total duration 6 hr 13 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "3:20 PM\n – \n6:33 PM\nDelta\n6 hr 13 min\nJFK–LAX\nNonstop\n227 kg CO2e\n-29% emissions\n1\n0\n$539\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 543 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 10:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 1:51 PM on Friday, November 20. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "10:30 AM\n – \n1:51 PM\nAmerican\n6 hr 21 min\nJFK–LAX\nNonstop\n319 kg CO2e\nAvg emissions\n1\n0\n$543\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 543 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 3:35 PM on Friday, November 20 and arrives at Los Angeles International Airport at 6:48 PM on Friday, November 20. Total duration 6 hr 13 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "3:35 PM\n – \n6:48 PM\nAmerican\n6 hr 13 min\nJFK–LAX\nNonstop\n274 kg CO2e\n-14% emissions\n1\n0\n$543\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 543 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 5:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 8:23 PM on Friday, November 20. Total duration 6 hr 23 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "5:00 PM\n – \n8:23 PM\nAmerican\n6 hr 23 min\nJFK–LAX\nNonstop\n548 kg CO2e\n+71% emissions\n1\n0\n$543\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 7:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 10:15 AM on Friday, November 20. Total duration 6 hr 15 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "7:00 AM\n – \n10:15 AM\nDelta\n6 hr 15 min\nJFK–LAX\nNonstop\n240 kg CO2e\n-25% emissions\n1\n0\n$579\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 8:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 11:19 AM on Friday, November 20. Total duration 6 hr 19 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "8:00 AM\n – \n11:19 AM\nDelta\n6 hr 19 min\nJFK–LAX\nNonstop\n249 kg CO2e\n-22% emissions\n1\n0\n$579\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 12:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 3:08 PM on Friday, November 20. Total duration 6 hr 8 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "12:00 PM\n – \n3:08 PM\nDelta\n6 hr 8 min\nJFK–LAX\nNonstop\n261 kg CO2e\n-18% emissions\n1\n0\n$579\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 2:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 5:16 PM on Friday, November 20. Total duration 6 hr 16 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "2:00 PM\n – \n5:16 PM\nDelta\n6 hr 16 min\nJFK–LAX\nNonstop\n240 kg CO2e\n-25% emissions\n1\n0\n$579\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 4:25 PM on Friday, November 20 and arrives at Los Angeles International Airport at 7:39 PM on Friday, November 20. Total duration 6 hr 14 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "4:25 PM\n – \n7:39 PM\nDelta\n6 hr 14 min\nJFK–LAX\nNonstop\n227 kg CO2e\n-29% emissions\n1\n0\n$579\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 7:10 PM on Friday, November 20 and arrives at Los Angeles International Airport at 10:39 PM on Friday, November 20. Total duration 6 hr 29 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "7:10 PM\n – \n10:39 PM\nDelta\n6 hr 29 min\nJFK–LAX\nNonstop\n261 kg CO2e\n-18% emissions\n1\n0\n$579\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 689 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 9:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 12:16 PM on Friday, November 20. Total duration 6 hr 16 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "9:00 AM\n – \n12:16 PM\nDelta\n6 hr 16 min\nJFK–LAX\nNonstop\n240 kg CO2e\n-25% emissions\n1\n0\n$689\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 689 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 11:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 2:14 PM on Friday, November 20. Total duration 6 hr 14 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "11:00 AM\n – \n2:14 PM\nDelta\n6 hr 14 min\nJFK–LAX\nNonstop\n240 kg CO2e\n-25% emissions\n1\n0\n$689\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 689 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 6:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 9:31 PM on Friday, November 20. Total duration 6 hr 31 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "6:00 PM\n – \n9:31 PM\nDelta\n6 hr 31 min\nJFK–LAX\nNonstop\n240 kg CO2e\n-25% emissions\n1\n0\n$689\nround trip"
+   },
+   {
+    "visible": true,
+    "aria": "From 709 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 11:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 2:51 PM on Friday, November 20. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "11:30 AM\n – \n2:51 PM\nAmerican\n6 hr 21 min\nJFK–LAX\nNonstop\n548 kg CO2e\n+71% emissions\n1\n0\n$709\nround trip"
+   },
+   {
+    "visible": false,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 6:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 9:22 AM on Friday, November 20. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "6:00 AM6:00 AM on Fri, Nov 20 – 9:22 AM9:22 AM on Fri, Nov 20American6 hr 22 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop274 kg CO2e-14% emissions-14% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripDepartureFri, Nov 20274 kg CO2e-14% emissions-14% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round trip6:00 AMJFK9:22 AMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripNonstopNonstop6 hr 22 minAmerican274 kg CO2e-14% emissions-14% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 6:10 AM on Friday, November 20 and arrives at Los Angeles International Airport at 9:25 AM on Friday, November 20. Total duration 6 hr 15 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "6:10 AM6:10 AM on Fri, Nov 20 – 9:25 AM9:25 AM on Fri, Nov 20JetBlue6 hr 15 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop374 kg CO2e+17% emissions+17% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripDepartureFri, Nov 20374 kg CO2e+17% emissions+17% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round trip6:10 AMJFK9:25 AMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripNonstopNonstop6 hr 15 minJetBlue374 kg CO2e+17% emissions+17% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 7:29 AM on Friday, November 20 and arrives at Los Angeles International Airport at 10:57 AM on Friday, November 20. Total duration 6 hr 28 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "7:29 AM7:29 AM on Fri, Nov 20 – 10:57 AM10:57 AM on Fri, Nov 20American6 hr 28 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop319 kg CO2eAvg emissionsAvg emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripDepartureFri, Nov 20319 kg CO2eAvg emissionsAvg emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round trip7:29 AMJFK10:57 AMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripNonstopNonstop6 hr 28 minAmerican319 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 9:27 PM on Friday, November 20 and arrives at Los Angeles International Airport at 12:49 AM on Saturday, November 21. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "9:27 PM9:27 PM on Fri, Nov 20 – 12:49 AM+112:49 AM on Sat, Nov 21American6 hr 22 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop274 kg CO2e-14% emissions-14% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripDepartureFri, Nov 20274 kg CO2e-14% emissions-14% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round trip9:27 PMJFK12:49 AM+1LAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripNonstopNonstop6 hr 22 minAmerican274 kg CO2e-14% emissions-14% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 409 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 9:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 1:02 AM on Saturday, November 21. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "9:40 PM9:40 PM on Fri, Nov 20 – 1:02 AM+11:02 AM on Sat, Nov 21JetBlue6 hr 22 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round trip9:40 PMJFK1:02 AM+1LAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$409round tripNonstopNonstop6 hr 22 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 449 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 9:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 12:18 PM on Friday, November 20. Total duration 6 hr 18 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "9:00 AM9:00 AM on Fri, Nov 20 – 12:18 PM12:18 PM on Fri, Nov 20American6 hr 18 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop280 kg CO2e-13% emissions-13% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round tripDepartureFri, Nov 20280 kg CO2e-13% emissions-13% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round trip9:00 AMJFK12:18 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round tripNonstopNonstop6 hr 18 minAmerican280 kg CO2e-13% emissions-13% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 449 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 6:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 9:25 PM on Friday, November 20. Total duration 6 hr 25 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "6:00 PM6:00 PM on Fri, Nov 20 – 9:25 PM9:25 PM on Fri, Nov 20American6 hr 25 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop319 kg CO2eAvg emissionsAvg emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round tripDepartureFri, Nov 20319 kg CO2eAvg emissionsAvg emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round trip6:00 PMJFK9:25 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round tripNonstopNonstop6 hr 25 minAmerican319 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 449 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 7:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 10:22 PM on Friday, November 20. Total duration 6 hr 22 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "7:00 PM7:00 PM on Fri, Nov 20 – 10:22 PM10:22 PM on Fri, Nov 20American6 hr 22 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop274 kg CO2e-14% emissions-14% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round tripDepartureFri, Nov 20274 kg CO2e-14% emissions-14% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round trip7:00 PMJFK10:22 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$449round tripNonstopNonstop6 hr 22 minAmerican274 kg CO2e-14% emissions-14% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 474 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 8:55 PM on Friday, November 20 and arrives at Los Angeles International Airport at 12:16 AM on Saturday, November 21. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "8:55 PM8:55 PM on Fri, Nov 20 – 12:16 AM+112:16 AM on Sat, Nov 21Delta6 hr 21 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop240 kg CO2e-25% emissions-25% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$474round tripDepartureFri, Nov 20240 kg CO2e-25% emissions-25% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$474round trip8:55 PMJFK12:16 AM+1LAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$474round tripNonstopNonstop6 hr 21 minDelta240 kg CO2e-25% emissions-25% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 7:10 AM on Friday, November 20 and arrives at Los Angeles International Airport at 10:30 AM on Friday, November 20. Total duration 6 hr 20 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "7:10 AM7:10 AM on Fri, Nov 20 – 10:30 AM10:30 AM on Fri, Nov 20JetBlue6 hr 20 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round trip7:10 AMJFK10:30 AMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripNonstopNonstop6 hr 20 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 8:25 AM on Friday, November 20 and arrives at Los Angeles International Airport at 11:50 AM on Friday, November 20. Total duration 6 hr 25 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "8:25 AM8:25 AM on Fri, Nov 20 – 11:50 AM11:50 AM on Fri, Nov 20JetBlue6 hr 25 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round trip8:25 AMJFK11:50 AMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripNonstopNonstop6 hr 25 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 9:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 12:51 PM on Friday, November 20. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "9:30 AM9:30 AM on Fri, Nov 20 – 12:51 PM12:51 PM on Fri, Nov 20JetBlue6 hr 21 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round trip9:30 AMJFK12:51 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripNonstopNonstop6 hr 21 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 7:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 11:04 PM on Friday, November 20. Total duration 6 hr 24 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "7:40 PM7:40 PM on Fri, Nov 20 – 11:04 PM11:04 PM on Fri, Nov 20JetBlue6 hr 24 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round trip7:40 PMJFK11:04 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripNonstopNonstop6 hr 24 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 478 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 8:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 11:59 PM on Friday, November 20. Total duration 6 hr 19 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "8:40 PM8:40 PM on Fri, Nov 20 – 11:59 PM11:59 PM on Fri, Nov 20JetBlue6 hr 19 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop411 kg CO2e+28% emissions+28% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripDepartureFri, Nov 20411 kg CO2e+28% emissions+28% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round trip8:40 PMJFK11:59 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$478round tripNonstopNonstop6 hr 19 minJetBlue411 kg CO2e+28% emissions+28% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 508 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 2:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 5:18 PM on Friday, November 20. Total duration 6 hr 18 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "2:00 PM2:00 PM on Fri, Nov 20 – 5:18 PM5:18 PM on Fri, Nov 20JetBlue6 hr 18 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$508round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$508round trip2:00 PMJFK5:18 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$508round tripNonstopNonstop6 hr 18 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 508 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 5:40 PM on Friday, November 20 and arrives at Los Angeles International Airport at 9:00 PM on Friday, November 20. Total duration 6 hr 20 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "5:40 PM5:40 PM on Fri, Nov 20 – 9:00 PM9:00 PM on Fri, Nov 20JetBlue6 hr 20 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$508round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$508round trip5:40 PMJFK9:00 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$508round tripNonstopNonstop6 hr 20 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 538 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 10:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 1:49 PM on Friday, November 20. Total duration 6 hr 19 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "10:30 AM10:30 AM on Fri, Nov 20 – 1:49 PM1:49 PM on Fri, Nov 20JetBlue6 hr 19 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop374 kg CO2e+17% emissions+17% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$538round tripDepartureFri, Nov 20374 kg CO2e+17% emissions+17% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$538round trip10:30 AMJFK1:49 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$538round tripNonstopNonstop6 hr 19 minJetBlue374 kg CO2e+17% emissions+17% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 538 US dollars round trip total. Nonstop flight with JetBlue. Leaves John F. Kennedy International Airport at 11:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 2:50 PM on Friday, November 20. Total duration 6 hr 20 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "B6",
+    "innerText": "11:30 AM11:30 AM on Fri, Nov 20 – 2:50 PM2:50 PM on Fri, Nov 20JetBlue6 hr 20 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop414 kg CO2e+29% emissions+29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$538round tripDepartureFri, Nov 20414 kg CO2e+29% emissions+29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$538round trip11:30 AMJFK2:50 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$538round tripNonstopNonstop6 hr 20 minJetBlue414 kg CO2e+29% emissions+29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 539 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 3:20 PM on Friday, November 20 and arrives at Los Angeles International Airport at 6:33 PM on Friday, November 20. Total duration 6 hr 13 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "3:20 PM3:20 PM on Fri, Nov 20 – 6:33 PM6:33 PM on Fri, Nov 20Delta6 hr 13 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop227 kg CO2e-29% emissions-29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$539round tripDepartureFri, Nov 20227 kg CO2e-29% emissions-29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$539round trip3:20 PMJFK6:33 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$539round tripNonstopNonstop6 hr 13 minDelta227 kg CO2e-29% emissions-29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 543 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 10:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 1:51 PM on Friday, November 20. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "10:30 AM10:30 AM on Fri, Nov 20 – 1:51 PM1:51 PM on Fri, Nov 20American6 hr 21 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop319 kg CO2eAvg emissionsAvg emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round tripDepartureFri, Nov 20319 kg CO2eAvg emissionsAvg emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round trip10:30 AMJFK1:51 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round tripNonstopNonstop6 hr 21 minAmerican319 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 543 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 3:35 PM on Friday, November 20 and arrives at Los Angeles International Airport at 6:48 PM on Friday, November 20. Total duration 6 hr 13 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "3:35 PM3:35 PM on Fri, Nov 20 – 6:48 PM6:48 PM on Fri, Nov 20American6 hr 13 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop274 kg CO2e-14% emissions-14% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round tripDepartureFri, Nov 20274 kg CO2e-14% emissions-14% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round trip3:35 PMJFK6:48 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round tripNonstopNonstop6 hr 13 minAmerican274 kg CO2e-14% emissions-14% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 543 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 5:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 8:23 PM on Friday, November 20. Total duration 6 hr 23 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "5:00 PM5:00 PM on Fri, Nov 20 – 8:23 PM8:23 PM on Fri, Nov 20American6 hr 23 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop548 kg CO2e+71% emissions+71% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round tripDepartureFri, Nov 20548 kg CO2e+71% emissions+71% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round trip5:00 PMJFK8:23 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$543round tripNonstopNonstop6 hr 23 minAmerican548 kg CO2e+71% emissions+71% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 7:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 10:15 AM on Friday, November 20. Total duration 6 hr 15 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "7:00 AM7:00 AM on Fri, Nov 20 – 10:15 AM10:15 AM on Fri, Nov 20Delta6 hr 15 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop240 kg CO2e-25% emissions-25% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripDepartureFri, Nov 20240 kg CO2e-25% emissions-25% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round trip7:00 AMJFK10:15 AMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripNonstopNonstop6 hr 15 minDelta240 kg CO2e-25% emissions-25% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 8:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 11:19 AM on Friday, November 20. Total duration 6 hr 19 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "8:00 AM8:00 AM on Fri, Nov 20 – 11:19 AM11:19 AM on Fri, Nov 20Delta6 hr 19 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop249 kg CO2e-22% emissions-22% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripDepartureFri, Nov 20249 kg CO2e-22% emissions-22% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round trip8:00 AMJFK11:19 AMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripNonstopNonstop6 hr 19 minDelta249 kg CO2e-22% emissions-22% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 12:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 3:08 PM on Friday, November 20. Total duration 6 hr 8 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "12:00 PM12:00 PM on Fri, Nov 20 – 3:08 PM3:08 PM on Fri, Nov 20Delta6 hr 8 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop261 kg CO2e-18% emissions-18% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripDepartureFri, Nov 20261 kg CO2e-18% emissions-18% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round trip12:00 PMJFK3:08 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripNonstopNonstop6 hr 8 minDelta261 kg CO2e-18% emissions-18% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 2:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 5:16 PM on Friday, November 20. Total duration 6 hr 16 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "2:00 PM2:00 PM on Fri, Nov 20 – 5:16 PM5:16 PM on Fri, Nov 20Delta6 hr 16 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop240 kg CO2e-25% emissions-25% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripDepartureFri, Nov 20240 kg CO2e-25% emissions-25% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round trip2:00 PMJFK5:16 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripNonstopNonstop6 hr 16 minDelta240 kg CO2e-25% emissions-25% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 4:25 PM on Friday, November 20 and arrives at Los Angeles International Airport at 7:39 PM on Friday, November 20. Total duration 6 hr 14 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "4:25 PM4:25 PM on Fri, Nov 20 – 7:39 PM7:39 PM on Fri, Nov 20Delta6 hr 14 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop227 kg CO2e-29% emissions-29% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripDepartureFri, Nov 20227 kg CO2e-29% emissions-29% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round trip4:25 PMJFK7:39 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripNonstopNonstop6 hr 14 minDelta227 kg CO2e-29% emissions-29% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 579 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 7:10 PM on Friday, November 20 and arrives at Los Angeles International Airport at 10:39 PM on Friday, November 20. Total duration 6 hr 29 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "7:10 PM7:10 PM on Fri, Nov 20 – 10:39 PM10:39 PM on Fri, Nov 20Delta6 hr 29 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop261 kg CO2e-18% emissions-18% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripDepartureFri, Nov 20261 kg CO2e-18% emissions-18% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round trip7:10 PMJFK10:39 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$579round tripNonstopNonstop6 hr 29 minDelta261 kg CO2e-18% emissions-18% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 689 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 9:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 12:16 PM on Friday, November 20. Total duration 6 hr 16 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "9:00 AM9:00 AM on Fri, Nov 20 – 12:16 PM12:16 PM on Fri, Nov 20Delta6 hr 16 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop240 kg CO2e-25% emissions-25% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round tripDepartureFri, Nov 20240 kg CO2e-25% emissions-25% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round trip9:00 AMJFK12:16 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round tripNonstopNonstop6 hr 16 minDelta240 kg CO2e-25% emissions-25% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 689 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 11:00 AM on Friday, November 20 and arrives at Los Angeles International Airport at 2:14 PM on Friday, November 20. Total duration 6 hr 14 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "11:00 AM11:00 AM on Fri, Nov 20 – 2:14 PM2:14 PM on Fri, Nov 20Delta6 hr 14 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop240 kg CO2e-25% emissions-25% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round tripDepartureFri, Nov 20240 kg CO2e-25% emissions-25% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round trip11:00 AMJFK2:14 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round tripNonstopNonstop6 hr 14 minDelta240 kg CO2e-25% emissions-25% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 689 US dollars round trip total. Nonstop flight with Delta. Leaves John F. Kennedy International Airport at 6:00 PM on Friday, November 20 and arrives at Los Angeles International Airport at 9:31 PM on Friday, November 20. Total duration 6 hr 31 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "DL",
+    "innerText": "6:00 PM6:00 PM on Fri, Nov 20 – 9:31 PM9:31 PM on Fri, Nov 20Delta6 hr 31 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop240 kg CO2e-25% emissions-25% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round tripDepartureFri, Nov 20240 kg CO2e-25% emissions-25% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round trip6:00 PMJFK9:31 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$689round tripNonstopNonstop6 hr 31 minDelta240 kg CO2e-25% emissions-25% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 709 US dollars round trip total. Nonstop flight with American. Leaves John F. Kennedy International Airport at 11:30 AM on Friday, November 20 and arrives at Los Angeles International Airport at 2:51 PM on Friday, November 20. Total duration 6 hr 21 min.   1 carry-on bag included. 0 checked bags included.  Select flight",
+    "carrier": "AA",
+    "innerText": "11:30 AM11:30 AM on Fri, Nov 20 – 2:51 PM2:51 PM on Fri, Nov 20American6 hr 21 minJFKJohn F. Kennedy International Airport–LAXLos Angeles International AirportNonstop548 kg CO2e+71% emissions+71% emissions1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$709round tripDepartureFri, Nov 20548 kg CO2e+71% emissions+71% emissionsSelect flight1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$709round trip11:30 AMJFK2:51 PMLAX1 0 Close dialog1 carry-on bag includedAdditional fees for checked bagsTo include bags, use the Bags filter$709round tripNonstopNonstop6 hr 21 minAmerican548 kg CO2e+71% emissions+71% emissions"
+   }
+  ]
+ },
+ "BOS_SIN_ow": {
+  "title": "Boston to Singapore | Google Flights",
+  "rows": [
+   {
+    "visible": true,
+    "aria": "From 1424 US dollars. 1 stop flight with Turkish Airlines. Leaves Boston Logan International Airport at 8:00 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 8:45 AM on Thursday, December 17. Total duration 23 hr 45 min.  Layover (1 of 1) is a 3 hr 55 min layover at Istanbul Airport in Istanbul. Select flight",
+    "carrier": "TK",
+    "innerText": "8:00 PM\n – \n8:45 AM+2\nTurkish Airlines\n23 hr 45 min\nBOS–SIN\n1 stop\n3 hr 55 min IST\n996 kg CO2e\n-11% emissions\n$1,424"
+   },
+   {
+    "visible": true,
+    "aria": "From 1532 US dollars. 1 stop flight with Emirates. Leaves Boston Logan International Airport at 10:10 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 8:30 AM on Thursday, December 17. Total duration 21 hr 20 min.  Layover (1 of 1) is a 1 hr 40 min layover at Dubai International Airport in Dubai. Select flight",
+    "carrier": "EK",
+    "innerText": "10:10 PM\n – \n8:30 AM+2\nEmirates\n21 hr 20 min\nBOS–SIN\n1 stop\n1 hr 40 min DXB\n1,142 kg CO2e\nAvg emissions\n$1,532"
+   },
+   {
+    "visible": true,
+    "aria": "From 1646 US dollars. 1 stop flight with JAL. Leaves Boston Logan International Airport at 12:00 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 12:50 AM on Thursday, December 17. Total duration 23 hr 50 min.  Layover (1 of 1) is a 2 hr layover at Narita International Airport in Tokyo. Select flight",
+    "carrier": "JL",
+    "innerText": "12:00 PM\n – \n12:50 AM+2\nJALAmerican\n23 hr 50 min\nBOS–SIN\n1 stop\n2 hr NRT\n1,141 kg CO2e\nAvg emissions\n$1,646"
+   },
+   {
+    "visible": true,
+    "aria": "From 1651 US dollars. 1 stop flight with Korean Air. Leaves Boston Logan International Airport at 11:10 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 12:15 AM on Thursday, December 17. Total duration 24 hr 5 min.  Layover (1 of 1) is a 1 hr 40 min layover at Incheon International Airport in Seoul. Select flight",
+    "carrier": "KE",
+    "innerText": "11:10 AM\n – \n12:15 AM+2\nKorean AirDelta\n24 hr 5 min\nBOS–SIN\n1 stop\n1 hr 40 min ICN\n1,120 kg CO2e\nAvg emissions\n$1,651"
+   },
+   {
+    "visible": true,
+    "aria": "From 1211 US dollars. 2 stops flight with American and Finnair. Operated by Republic as American Eagle for American Airlines. Leaves Boston Logan International Airport at 5:35 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 6:40 PM on Thursday, December 17. Total duration 36 hr 5 min.  Layover (1 of 2) is a 3 hr 32 min layover at John F. Kennedy International Airport in New York. Layover (2 of 2) is a 10 hr 10 min layover at Helsinki Airport in Helsinki. Select flight",
+    "carrier": null,
+    "innerText": "5:35 PM\n – \n6:40 PM+2\nAmerican, FinnairOperated by Republic as American Eagle for American Airlines\n36 hr 5 min\nBOS–SIN\n2 stops\nJFK, HEL\n1,248 kg CO2e\n+12% emissions\n$1,211"
+   },
+   {
+    "visible": true,
+    "aria": "From 1350 US dollars. 2 stops flight with Alaska and JAL. Operated by Japan Airlines. Leaves Boston Logan International Airport at 7:00 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 12:50 AM on Thursday, December 17. Total duration 28 hr 50 min.  Layover (1 of 2) is a 1 hr 17 min layover at Seattle-Tacoma International Airport in Seattle. Layover (2 of 2) is a 2 hr 45 min layover at Narita International Airport in Tokyo. Select flight",
+    "carrier": null,
+    "innerText": "7:00 AM\n – \n12:50 AM+2\nAlaska, JALOperated by Japan Airlines\n28 hr 50 min\nBOS–SIN\n2 stops\nSEA, NRT\n1,262 kg CO2e\n+13% emissions\n$1,350"
+   },
+   {
+    "visible": true,
+    "aria": "From 1387 US dollars. 2 stops flight with Virgin Atlantic and KLM. Leaves Boston Logan International Airport at 10:11 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 4:15 PM on Thursday, December 17. Total duration 29 hr 4 min.  Layover (1 of 2) is a 1 hr 50 min layover at Heathrow Airport in London. Layover (2 of 2) is a 6 hr 40 min layover at Amsterdam Airport Schiphol in Amsterdam. Select flight",
+    "carrier": null,
+    "innerText": "10:11 PM\n – \n4:15 PM+2\nVirgin Atlantic, KLM\n29 hr 4 min\nBOS–SIN\n2 stops\nLHR, AMS\n1,110 kg CO2e\nAvg emissions\n$1,387"
+   },
+   {
+    "visible": true,
+    "aria": "From 1387 US dollars. 2 stops flight with Virgin Atlantic and KLM. Operated by KLM Cityhopper. Leaves Boston Logan International Airport at 10:11 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 4:15 PM on Thursday, December 17. Total duration 29 hr 4 min.  Layover (1 of 2) is a 7 hr 10 min layover at Heathrow Airport in London. Layover (2 of 2) is a 1 hr 20 min layover at Amsterdam Airport Schiphol in Amsterdam. Select flight",
+    "carrier": null,
+    "innerText": "10:11 PM\n – \n4:15 PM+2\nVirgin Atlantic, KLMOperated by KLM Cityhopper\n29 hr 4 min\nBOS–SIN\n2 stops\nLHR, AMS\n1,123 kg CO2e\nAvg emissions\n$1,387"
+   },
+   {
+    "visible": true,
+    "aria": "From 1534 US dollars. 1 stop flight with Etihad. Leaves Boston Logan International Airport at 3:40 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 9:35 AM on Thursday, December 17. Total duration 28 hr 55 min.  Layover (1 of 1) is a 9 hr 10 min layover at Zayed International Airport in Abu Dhabi. Select flight",
+    "carrier": "EY",
+    "innerText": "3:40 PM\n – \n9:35 AM+2\nEtihad\n28 hr 55 min\nBOS–SIN\n1 stop\n9 hr 10 min AUH\n908 kg CO2e\n-19% emissions\n$1,534"
+   },
+   {
+    "visible": true,
+    "aria": "From 1619 US dollars. 1 stop flight with Air France. Leaves Boston Logan International Airport at 11:25 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 4:55 PM on Thursday, December 17. Total duration 28 hr 30 min.  Layover (1 of 1) is a 8 hr 50 min layover at Aéroport de Paris-Charles de Gaulle in Paris. Select flight",
+    "carrier": "AF",
+    "innerText": "11:25 PM\n – \n4:55 PM+2\nAir FranceKLM\n28 hr 30 min\nBOS–SIN\n1 stop\n8 hr 50 min CDG\n973 kg CO2e\n-13% emissions\n$1,619"
+   },
+   {
+    "visible": true,
+    "aria": "From 2411 US dollars. 1 stop flight with Cathay Pacific. Leaves Boston Logan International Airport at 12:30 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 11:50 AM on Wednesday, December 16. Total duration 22 hr 20 min.  Layover (1 of 1) is a 2 hr 50 min layover at Hong Kong International Airport in Hong Kong. Select flight",
+    "carrier": "CX",
+    "innerText": "12:30 AM\n – \n11:50 AM+1\nCathay Pacific\n22 hr 20 min\nBOS–SIN\n1 stop\n2 hr 50 min HKG\n855 kg CO2e\n-23% emissions\n$2,411"
+   },
+   {
+    "visible": true,
+    "aria": "From 2876 US dollars. 1 stop flight with Turkish Airlines. Leaves Boston Logan International Airport at 8:00 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 6:50 AM on Thursday, December 17. Total duration 21 hr 50 min.  Layover (1 of 1) is a 2 hr layover at Istanbul Airport in Istanbul. Select flight",
+    "carrier": "TK",
+    "innerText": "8:00 PM\n – \n6:50 AM+2\nTurkish Airlines\n21 hr 50 min\nBOS–SIN\n1 stop\n2 hr IST\n1,009 kg CO2e\n-10% emissions\n$2,876"
+   },
+   {
+    "visible": true,
+    "aria": "From 5684 US dollars. 1 stop flight with British Airways. Leaves Boston Logan International Airport at 7:30 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 6:25 PM on Wednesday, December 16. Total duration 21 hr 55 min.  Layover (1 of 1) is a 2 hr layover at Heathrow Airport in London. Select flight",
+    "carrier": "BA",
+    "innerText": "7:30 AM\n – \n6:25 PM+1\nBritish AirwaysAmerican\n21 hr 55 min\nBOS–SIN\n1 stop\n2 hr LHR\n998 kg CO2e\n-11% emissions\n$5,684"
+   },
+   {
+    "visible": false,
+    "aria": "From 1424 US dollars. 1 stop flight with Turkish Airlines. Leaves Boston Logan International Airport at 8:00 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 8:45 AM on Thursday, December 17. Total duration 23 hr 45 min.  Layover (1 of 1) is a 3 hr 55 min layover at Istanbul Airport in Istanbul. Select flight",
+    "carrier": "TK",
+    "innerText": "8:00 PM8:00 PM on Tue, Dec 15 – 8:45 AM+28:45 AM on Thu, Dec 17Turkish Airlines23 hr 45 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop3 hr 55 min ISTIstanbul Airport996 kg CO2e-11% emissions-11% emissions$1,424DepartureTue, Dec 15996 kg CO2e-11% emissions-11% emissionsSelect flight$1,4248:00 PMBOS8:45 AM+2SIN$1,4241 stop in IST1 stop23 hr 45 minTurkish Airlines996 kg CO2e-11% emissions-11% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1532 US dollars. 1 stop flight with Emirates. Leaves Boston Logan International Airport at 10:10 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 8:30 AM on Thursday, December 17. Total duration 21 hr 20 min.  Layover (1 of 1) is a 1 hr 40 min layover at Dubai International Airport in Dubai. Select flight",
+    "carrier": "EK",
+    "innerText": "10:10 PM10:10 PM on Tue, Dec 15 – 8:30 AM+28:30 AM on Thu, Dec 17Emirates21 hr 20 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop1 hr 40 min DXBDubai International Airport1,142 kg CO2eAvg emissionsAvg emissions$1,532DepartureTue, Dec 151,142 kg CO2eAvg emissionsAvg emissionsSelect flight$1,53210:10 PMBOS8:30 AM+2SIN$1,5321 stop in DXB1 stop21 hr 20 minEmirates1,142 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1646 US dollars. 1 stop flight with JAL. Leaves Boston Logan International Airport at 12:00 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 12:50 AM on Thursday, December 17. Total duration 23 hr 50 min.  Layover (1 of 1) is a 2 hr layover at Narita International Airport in Tokyo. Select flight",
+    "carrier": "JL",
+    "innerText": "12:00 PM12:00 PM on Tue, Dec 15 – 12:50 AM+212:50 AM on Thu, Dec 17JALAmerican23 hr 50 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop2 hr NRTNarita International Airport1,141 kg CO2eAvg emissionsAvg emissions$1,646DepartureTue, Dec 151,141 kg CO2eAvg emissionsAvg emissionsSelect flight$1,64612:00 PMBOS12:50 AM+2SIN$1,6461 stop in NRT1 stop23 hr 50 minJALAmerican1,141 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1651 US dollars. 1 stop flight with Korean Air. Leaves Boston Logan International Airport at 11:10 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 12:15 AM on Thursday, December 17. Total duration 24 hr 5 min.  Layover (1 of 1) is a 1 hr 40 min layover at Incheon International Airport in Seoul. Select flight",
+    "carrier": "KE",
+    "innerText": "11:10 AM11:10 AM on Tue, Dec 15 – 12:15 AM+212:15 AM on Thu, Dec 17Korean AirDelta24 hr 5 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop1 hr 40 min ICNIncheon International Airport1,120 kg CO2eAvg emissionsAvg emissions$1,651DepartureTue, Dec 151,120 kg CO2eAvg emissionsAvg emissionsSelect flight$1,65111:10 AMBOS12:15 AM+2SIN$1,6511 stop in ICN1 stop24 hr 5 minKorean AirDelta1,120 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1211 US dollars. 2 stops flight with American and Finnair. Operated by Republic as American Eagle for American Airlines. Leaves Boston Logan International Airport at 5:35 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 6:40 PM on Thursday, December 17. Total duration 36 hr 5 min.  Layover (1 of 2) is a 3 hr 32 min layover at John F. Kennedy International Airport in New York. Layover (2 of 2) is a 10 hr 10 min layover at Helsinki Airport in Helsinki. Select flight",
+    "carrier": null,
+    "innerText": "5:35 PM5:35 PM on Tue, Dec 15 – 6:40 PM+26:40 PM on Thu, Dec 17American, FinnairOperated by Republic as American Eagle for American Airlines36 hr 5 minBOSBoston Logan International Airport–SINSingapore Changi Airport2 stops10 hr 10 min layoverLong layoverJFKJohn F. Kennedy International Airport, HELHelsinki Airport1,248 kg CO2e+12% emissions+12% emissions$1,211DepartureTue, Dec 151,248 kg CO2e+12% emissions+12% emissionsSelect flight$1,2115:35 PMBOS6:40 PM+2SIN$1,2112 stops in JFK, HEL2 stops36 hr 5 minAmerican, FinnairOperated by Republic as American Eagle for American Airlines1,248 kg CO2e+12% emissions+12% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1350 US dollars. 2 stops flight with Alaska and JAL. Operated by Japan Airlines. Leaves Boston Logan International Airport at 7:00 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 12:50 AM on Thursday, December 17. Total duration 28 hr 50 min.  Layover (1 of 2) is a 1 hr 17 min layover at Seattle-Tacoma International Airport in Seattle. Layover (2 of 2) is a 2 hr 45 min layover at Narita International Airport in Tokyo. Select flight",
+    "carrier": null,
+    "innerText": "7:00 AM7:00 AM on Tue, Dec 15 – 12:50 AM+212:50 AM on Thu, Dec 17Alaska, JALOperated by Japan Airlines28 hr 50 minBOSBoston Logan International Airport–SINSingapore Changi Airport2 stopsSEASeattle-Tacoma International Airport, NRTNarita International Airport1,262 kg CO2e+13% emissions+13% emissions$1,350DepartureTue, Dec 151,262 kg CO2e+13% emissions+13% emissionsSelect flight$1,3507:00 AMBOS12:50 AM+2SIN$1,3502 stops in SEA, NRT2 stops28 hr 50 minAlaska, JALOperated by Japan Airlines1,262 kg CO2e+13% emissions+13% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1387 US dollars. 2 stops flight with Virgin Atlantic and KLM. Leaves Boston Logan International Airport at 10:11 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 4:15 PM on Thursday, December 17. Total duration 29 hr 4 min.  Layover (1 of 2) is a 1 hr 50 min layover at Heathrow Airport in London. Layover (2 of 2) is a 6 hr 40 min layover at Amsterdam Airport Schiphol in Amsterdam. Select flight",
+    "carrier": null,
+    "innerText": "10:11 PM10:11 PM on Tue, Dec 15 – 4:15 PM+24:15 PM on Thu, Dec 17Virgin Atlantic, KLM29 hr 4 minBOSBoston Logan International Airport–SINSingapore Changi Airport2 stops6 hr 40 min layoverLong layoverLHRHeathrow Airport, AMSAmsterdam Airport Schiphol1,110 kg CO2eAvg emissionsAvg emissions$1,387DepartureTue, Dec 151,110 kg CO2eAvg emissionsAvg emissionsSelect flight$1,38710:11 PMBOS4:15 PM+2SIN$1,3872 stops in LHR, AMS2 stops29 hr 4 minVirgin Atlantic, KLM1,110 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1387 US dollars. 2 stops flight with Virgin Atlantic and KLM. Operated by KLM Cityhopper. Leaves Boston Logan International Airport at 10:11 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 4:15 PM on Thursday, December 17. Total duration 29 hr 4 min.  Layover (1 of 2) is a 7 hr 10 min layover at Heathrow Airport in London. Layover (2 of 2) is a 1 hr 20 min layover at Amsterdam Airport Schiphol in Amsterdam. Select flight",
+    "carrier": null,
+    "innerText": "10:11 PM10:11 PM on Tue, Dec 15 – 4:15 PM+24:15 PM on Thu, Dec 17Virgin Atlantic, KLMOperated by KLM Cityhopper29 hr 4 minBOSBoston Logan International Airport–SINSingapore Changi Airport2 stops7 hr 10 min layoverLong layoverLHRHeathrow Airport, AMSAmsterdam Airport Schiphol1,123 kg CO2eAvg emissionsAvg emissions$1,387DepartureTue, Dec 151,123 kg CO2eAvg emissionsAvg emissionsSelect flight$1,38710:11 PMBOS4:15 PM+2SIN$1,3872 stops in LHR, AMS2 stops29 hr 4 minVirgin Atlantic, KLMOperated by KLM Cityhopper1,123 kg CO2eAvg emissionsAvg emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1534 US dollars. 1 stop flight with Etihad. Leaves Boston Logan International Airport at 3:40 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 9:35 AM on Thursday, December 17. Total duration 28 hr 55 min.  Layover (1 of 1) is a 9 hr 10 min layover at Zayed International Airport in Abu Dhabi. Select flight",
+    "carrier": "EY",
+    "innerText": "3:40 PM3:40 PM on Tue, Dec 15 – 9:35 AM+29:35 AM on Thu, Dec 17Etihad28 hr 55 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop9 hr 10 min layoverLong layover9 hr 10 min AUHZayed International Airport908 kg CO2e-19% emissions-19% emissions$1,534DepartureTue, Dec 15908 kg CO2e-19% emissions-19% emissionsSelect flight$1,5343:40 PMBOS9:35 AM+2SIN$1,5341 stop in AUH1 stop28 hr 55 minEtihad908 kg CO2e-19% emissions-19% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 1619 US dollars. 1 stop flight with Air France. Leaves Boston Logan International Airport at 11:25 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 4:55 PM on Thursday, December 17. Total duration 28 hr 30 min.  Layover (1 of 1) is a 8 hr 50 min layover at Aéroport de Paris-Charles de Gaulle in Paris. Select flight",
+    "carrier": "AF",
+    "innerText": "11:25 PM11:25 PM on Tue, Dec 15 – 4:55 PM+24:55 PM on Thu, Dec 17Air FranceKLM28 hr 30 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop8 hr 50 min layoverLong layover8 hr 50 min CDGAéroport de Paris-Charles de Gaulle973 kg CO2e-13% emissions-13% emissions$1,619DepartureTue, Dec 15973 kg CO2e-13% emissions-13% emissionsSelect flight$1,61911:25 PMBOS4:55 PM+2SIN$1,6191 stop in CDG1 stop28 hr 30 minAir FranceKLM973 kg CO2e-13% emissions-13% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 2411 US dollars. 1 stop flight with Cathay Pacific. Leaves Boston Logan International Airport at 12:30 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 11:50 AM on Wednesday, December 16. Total duration 22 hr 20 min.  Layover (1 of 1) is a 2 hr 50 min layover at Hong Kong International Airport in Hong Kong. Select flight",
+    "carrier": "CX",
+    "innerText": "12:30 AM12:30 AM on Tue, Dec 15 – 11:50 AM+111:50 AM on Wed, Dec 16Cathay Pacific22 hr 20 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop2 hr 50 min HKGHong Kong International Airport855 kg CO2e-23% emissions-23% emissions$2,411DepartureTue, Dec 15855 kg CO2e-23% emissions-23% emissionsSelect flight$2,41112:30 AMBOS11:50 AM+1SIN$2,4111 stop in HKG1 stop22 hr 20 minCathay Pacific855 kg CO2e-23% emissions-23% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 2876 US dollars. 1 stop flight with Turkish Airlines. Leaves Boston Logan International Airport at 8:00 PM on Tuesday, December 15 and arrives at Singapore Changi Airport at 6:50 AM on Thursday, December 17. Total duration 21 hr 50 min.  Layover (1 of 1) is a 2 hr layover at Istanbul Airport in Istanbul. Select flight",
+    "carrier": "TK",
+    "innerText": "8:00 PM8:00 PM on Tue, Dec 15 – 6:50 AM+26:50 AM on Thu, Dec 17Turkish Airlines21 hr 50 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop2 hr ISTIstanbul Airport1,009 kg CO2e-10% emissions-10% emissions$2,876DepartureTue, Dec 151,009 kg CO2e-10% emissions-10% emissionsSelect flight$2,8768:00 PMBOS6:50 AM+2SIN$2,8761 stop in IST1 stop21 hr 50 minTurkish Airlines1,009 kg CO2e-10% emissions-10% emissions"
+   },
+   {
+    "visible": false,
+    "aria": "From 5684 US dollars. 1 stop flight with British Airways. Leaves Boston Logan International Airport at 7:30 AM on Tuesday, December 15 and arrives at Singapore Changi Airport at 6:25 PM on Wednesday, December 16. Total duration 21 hr 55 min.  Layover (1 of 1) is a 2 hr layover at Heathrow Airport in London. Select flight",
+    "carrier": "BA",
+    "innerText": "7:30 AM7:30 AM on Tue, Dec 15 – 6:25 PM+16:25 PM on Wed, Dec 16British AirwaysAmerican21 hr 55 minBOSBoston Logan International Airport–SINSingapore Changi Airport1 stop2 hr LHRHeathrow Airport998 kg CO2e-11% emissions-11% emissions$5,684DepartureTue, Dec 15998 kg CO2e-11% emissions-11% emissionsSelect flight$5,6847:30 AMBOS6:25 PM+1SIN$5,6841 stop in LHR1 stop21 hr 55 minBritish AirwaysAmerican998 kg CO2e-11% emissions-11% emissions"
+   }
+  ]
+ }
+}

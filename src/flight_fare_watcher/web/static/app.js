@@ -1,5 +1,6 @@
-// Vanilla JS for both the search page and the watches page - no build step,
-// no framework, matches this being a small local single-user tool.
+// Shared helpers used by both the search page (search.js) and the watches
+// page (watches.js). No build step, no framework - vanilla JS and fetch,
+// matching this being a small local single-user tool.
 
 function showStatus(el, message, kind) {
   el.textContent = message;
@@ -7,7 +8,15 @@ function showStatus(el, message, kind) {
   el.hidden = false;
 }
 
+function hideStatus(el) {
+  el.hidden = true;
+}
+
+// Only ever return a resolved http(s) URL. Used before setting any `href`
+// that originates from a scraped/parsed value, so a malformed or malicious
+// deep link can never become a javascript:/data: URI in the DOM.
 function safeHref(url) {
+  if (!url) return null;
   try {
     const parsed = new URL(url, window.location.origin);
     if (parsed.protocol === "http:" || parsed.protocol === "https:") {
@@ -19,217 +28,178 @@ function safeHref(url) {
   return null;
 }
 
-function renderSiteStatuses(container, siteStatuses) {
-  container.textContent = "";
-  for (const [site, status] of Object.entries(siteStatuses || {})) {
-    const pill = document.createElement("span");
-    pill.className = "site-status-pill " + status;
-    pill.textContent = `${site}: ${status.replace(/_/g, " ")}`;
-    container.appendChild(pill);
+function formatDuration(minutes) {
+  if (!minutes) return "–";
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return h > 0 ? `${h}h ${String(m).padStart(2, "0")}m` : `${m}m`;
+}
+
+function formatStops(stops) {
+  if (stops === null || stops === undefined) return "";
+  if (stops === 0) return "Nonstop";
+  return stops === 1 ? "1 stop" : `${stops} stops`;
+}
+
+// Prices round-tripped through SQLite come back as "450.0" / "126.0" (a REAL
+// column via Decimal(str(float))) while freshly-scraped prices are already
+// clean integers like "126". Normalize both to the same display form rather
+// than showing a trailing ".0" only for watched-route prices.
+function formatPrice(value) {
+  const num = typeof value === "number" ? value : parseFloat(value);
+  if (Number.isNaN(num)) return String(value);
+  return Number.isInteger(num) ? String(num) : num.toFixed(2);
+}
+
+function formatMoney(price, currency) {
+  return `$${formatPrice(price)} ${currency || "USD"}`;
+}
+
+const SITE_LABELS = {
+  google_flights: "Google Flights",
+  amadeus: "Amadeus",
+  demo: "Sample data",
+};
+
+function siteLabel(site) {
+  return SITE_LABELS[site] || site;
+}
+
+function debounce(fn, waitMs) {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), waitMs);
+  };
+}
+
+// Wires a text input to a dropdown of /api/airports suggestions, storing the
+// chosen IATA code on the input via a data attribute while still showing a
+// friendly "City (CODE)" label. Typing a bare 3-letter code works too -
+// autocomplete is a convenience, never a requirement to search.
+function wireAirportAutocomplete(inputEl, suggestionsEl) {
+  let activeIndex = -1;
+  let currentItems = [];
+
+  function close() {
+    suggestionsEl.hidden = true;
+    suggestionsEl.textContent = "";
+    activeIndex = -1;
+    currentItems = [];
   }
-}
 
-function setupSearchPage() {
-  const form = document.getElementById("search-form");
-  if (!form) return;
-
-  const statusEl = document.getElementById("search-status");
-  const siteStatusesEl = document.getElementById("site-statuses");
-  const table = document.getElementById("results-table");
-  const tbody = document.getElementById("results-body");
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const origin = document.getElementById("origin").value.trim().toUpperCase();
-    const destination = document.getElementById("destination").value.trim().toUpperCase();
-    const departDate = document.getElementById("depart_date").value;
-    const returnDate = document.getElementById("return_date").value || null;
-
-    showStatus(statusEl, "Searching Google Flights - this can take 10-20 seconds...", "info");
-    table.hidden = true;
-    tbody.textContent = "";
-    siteStatusesEl.textContent = "";
-
-    try {
-      const response = await fetch("/api/search", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          origin,
-          destination,
-          depart_date: departDate,
-          return_date: returnDate,
-        }),
-      });
-
-      if (!response.ok) {
-        const errorBody = await response.json().catch(() => ({}));
-        showStatus(statusEl, `Search failed: ${errorBody.detail || response.statusText}`, "error");
-        return;
-      }
-
-      const data = await response.json();
-      renderSiteStatuses(siteStatusesEl, data.site_statuses);
-
-      if (data.fares.length === 0) {
-        showStatus(statusEl, "No fares found for that route/date.", "info");
-        return;
-      }
-
-      statusEl.hidden = true;
-      table.hidden = false;
-      for (const fare of data.fares) {
-        const row = document.createElement("tr");
-
-        const priceCell = document.createElement("td");
-        priceCell.textContent = `$${fare.price} ${fare.currency}`;
-        row.appendChild(priceCell);
-
-        const airlineCell = document.createElement("td");
-        airlineCell.textContent = fare.airline || "-";
-        row.appendChild(airlineCell);
-
-        const siteCell = document.createElement("td");
-        siteCell.textContent = fare.site;
-        row.appendChild(siteCell);
-
-        const linkCell = document.createElement("td");
-        const href = safeHref(fare.deep_link);
-        if (href) {
-          const link = document.createElement("a");
-          link.href = href;
-          link.target = "_blank";
-          link.rel = "noopener noreferrer";
-          link.textContent = "View / book";
-          linkCell.appendChild(link);
-        }
-        row.appendChild(linkCell);
-
-        const watchCell = document.createElement("td");
-        const watchButton = document.createElement("button");
-        watchButton.className = "secondary";
-        watchButton.type = "button";
-        watchButton.textContent = "Watch this route";
-        watchButton.addEventListener("click", async () => {
-          watchButton.disabled = true;
-          try {
-            const watchResponse = await fetch("/api/watches", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                origin,
-                destination,
-                depart_date: departDate,
-                return_date: returnDate,
-              }),
-            });
-            if (watchResponse.ok) {
-              watchButton.textContent = "Watching";
-            } else {
-              const body = await watchResponse.json().catch(() => ({}));
-              watchButton.textContent = body.detail === undefined ? "Failed" : "Already watched";
-            }
-          } catch (err) {
-            watchButton.textContent = "Failed";
-          }
-        });
-        watchCell.appendChild(watchButton);
-        row.appendChild(watchCell);
-
-        tbody.appendChild(row);
-      }
-    } catch (err) {
-      showStatus(statusEl, `Search failed: ${err}`, "error");
-    }
-  });
-}
-
-async function loadWatches() {
-  const tbody = document.getElementById("watches-body");
-  if (!tbody) return;
-
-  const response = await fetch("/api/watches");
-  const watches = await response.json();
-  tbody.textContent = "";
-
-  for (const watch of watches) {
-    const row = document.createElement("tr");
-
-    const routeCell = document.createElement("td");
-    routeCell.textContent = `${watch.origin} -> ${watch.destination}`;
-    row.appendChild(routeCell);
-
-    const datesCell = document.createElement("td");
-    datesCell.textContent = watch.return_date
-      ? `${watch.depart_date} - ${watch.return_date}`
-      : `${watch.depart_date} (one way)`;
-    row.appendChild(datesCell);
-
-    const targetCell = document.createElement("td");
-    targetCell.textContent = watch.target_price ? `$${watch.target_price}` : "-";
-    row.appendChild(targetCell);
-
-    const statusCell = document.createElement("td");
-    statusCell.textContent = watch.is_active ? "Active" : "Removed";
-    row.appendChild(statusCell);
-
-    const actionCell = document.createElement("td");
-    if (watch.is_active) {
-      const removeButton = document.createElement("button");
-      removeButton.className = "danger";
-      removeButton.type = "button";
-      removeButton.textContent = "Remove";
-      removeButton.addEventListener("click", async () => {
-        removeButton.disabled = true;
-        await fetch(`/api/watches/${watch.id}`, { method: "DELETE" });
-        loadWatches();
-      });
-      actionCell.appendChild(removeButton);
-    }
-    row.appendChild(actionCell);
-
-    tbody.appendChild(row);
+  function choose(item) {
+    inputEl.value = item.label;
+    inputEl.dataset.code = item.code;
+    close();
   }
-}
 
-function setupWatchesPage() {
-  const form = document.getElementById("watch-form");
-  if (!form) return;
-
-  const statusEl = document.getElementById("watch-status");
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const targetPriceValue = document.getElementById("w-target_price").value;
-    const alertEmailValue = document.getElementById("w-alert_email").value.trim();
-
-    const payload = {
-      origin: document.getElementById("w-origin").value.trim().toUpperCase(),
-      destination: document.getElementById("w-destination").value.trim().toUpperCase(),
-      depart_date: document.getElementById("w-depart_date").value,
-      return_date: document.getElementById("w-return_date").value || null,
-      target_price: targetPriceValue ? targetPriceValue : null,
-      alert_email: alertEmailValue || null,
-    };
-
-    const response = await fetch("/api/watches", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+  function render(items) {
+    currentItems = items;
+    suggestionsEl.textContent = "";
+    if (items.length === 0) {
+      close();
+      return;
+    }
+    items.forEach((item, index) => {
+      const row = document.createElement("div");
+      row.className = "suggestion-row";
+      row.setAttribute("role", "option");
+      row.textContent = item.label;
+      row.addEventListener("mousedown", (event) => {
+        event.preventDefault(); // keep focus so 'blur' doesn't fire first
+        choose(item);
+      });
+      if (index === activeIndex) row.classList.add("active");
+      suggestionsEl.appendChild(row);
     });
+    suggestionsEl.hidden = false;
+  }
 
-    if (response.ok) {
-      showStatus(statusEl, "Watch added.", "info");
-      form.reset();
-      loadWatches();
-    } else {
-      const body = await response.json().catch(() => ({}));
-      showStatus(statusEl, `Could not add watch: ${body.detail || response.statusText}`, "error");
+  const fetchSuggestions = debounce(async (term) => {
+    if (!term || term.length < 2) {
+      close();
+      return;
+    }
+    try {
+      const response = await fetch(`/api/airports?q=${encodeURIComponent(term)}`);
+      if (!response.ok) return;
+      const results = await response.json();
+      // The field may have lost focus (or its value changed again) while
+      // this request was in flight - rendering now would pop the dropdown
+      // back open after the user already moved on.
+      if (document.activeElement !== inputEl) return;
+      render(results);
+    } catch (err) {
+      // Autocomplete failing silently is fine - the field still accepts a
+      // typed code.
+    }
+  }, 150);
+
+  inputEl.addEventListener("input", () => {
+    delete inputEl.dataset.code;
+    fetchSuggestions(inputEl.value.trim());
+  });
+
+  inputEl.addEventListener("keydown", (event) => {
+    if (suggestionsEl.hidden || currentItems.length === 0) return;
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      activeIndex = Math.min(activeIndex + 1, currentItems.length - 1);
+      render(currentItems);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      activeIndex = Math.max(activeIndex - 1, 0);
+      render(currentItems);
+    } else if (event.key === "Enter" && activeIndex >= 0) {
+      event.preventDefault();
+      choose(currentItems[activeIndex]);
+    } else if (event.key === "Escape") {
+      close();
     }
   });
 
-  loadWatches();
+  inputEl.addEventListener("blur", () => setTimeout(close, 100));
+
+  return {
+    /** The 3-letter code to actually search with: the chosen suggestion's
+     *  code, or whatever the user typed if it already looks like one. */
+    getCode() {
+      if (inputEl.dataset.code) return inputEl.dataset.code;
+      const typed = inputEl.value.trim().toUpperCase();
+      return /^[A-Z]{3}$/.test(typed) ? typed : typed;
+    },
+    setCode(code, label) {
+      inputEl.value = label || code;
+      inputEl.dataset.code = code;
+    },
+  };
 }
 
-setupSearchPage();
-setupWatchesPage();
+function renderProviderStrip(providers) {
+  const el = document.getElementById("provider-strip");
+  if (!el) return;
+  el.textContent = "";
+  for (const provider of providers || []) {
+    const pill = document.createElement("span");
+    pill.className = "provider-pill";
+    pill.textContent = siteLabel(provider.site);
+    pill.title = provider.description || "";
+    el.appendChild(pill);
+  }
+}
+
+async function loadProviderStrip() {
+  try {
+    const response = await fetch("/api/providers");
+    if (!response.ok) return;
+    const data = await response.json();
+    renderProviderStrip(
+      (data.enabled || []).map((site) => ({ site, description: data.descriptions[site] }))
+    );
+  } catch (err) {
+    // non-essential UI chrome
+  }
+}
+
+loadProviderStrip();

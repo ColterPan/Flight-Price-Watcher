@@ -8,18 +8,26 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/">Flight Fare Watcher</a>
+    <a class="brand" href="/">
+      <span class="brand-mark">&#9992;</span> Flight Fare Watcher
+    </a>
     <nav>
-      <a href="/">Search</a>
-      <a href="/watches">Watched Routes</a>
+      <a href="/" class="{{ 'active' if active_page == 'search' else '' }}">Search</a>
+      <a href="/watches" class="{{ 'active' if active_page == 'watches' else '' }}">Watched Routes</a>
     </nav>
+    <div id="provider-strip" class="provider-strip" aria-live="polite"></div>
   </header>
   <main class="container">
     {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">
-    <p>Personal use only - scrapes Google Flights. See the README for the Terms of Service disclaimer.</p>
+    <p>
+      Personal use only. Fares shown here may come from live scraping, a paid
+      flight-data API, or sample data - each result says which. See the
+      README for the full Terms of Service disclaimer.
+    </p>
   </footer>
+  <script src="/static/app.js"></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
