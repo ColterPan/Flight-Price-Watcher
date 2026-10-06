@@ -329,6 +329,13 @@ button.link-button, .link-button {
   gap: 0.5rem;
 }
 
+.toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .sort-control {
   display: flex;
   align-items: center;
@@ -347,7 +354,7 @@ button.link-button, .link-button {
 
 .fare-card {
   display: grid;
-  grid-template-columns: 7rem 1fr 11rem;
+  grid-template-columns: 9rem 1fr 11rem;
   gap: 1rem;
   align-items: center;
   background: var(--surface);
@@ -355,6 +362,22 @@ button.link-button, .link-button {
   border-radius: 10px;
   padding: 1rem;
   box-shadow: var(--shadow);
+}
+
+.fare-card.cheapest {
+  border-color: var(--ok);
+  box-shadow: 0 0 0 1px var(--ok);
+}
+
+.cheapest-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ok);
+  background: var(--ok-bg);
+  border: 1px solid var(--ok);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  width: fit-content;
 }
 
 .fare-price-col {
@@ -366,6 +389,11 @@ button.link-button, .link-button {
 .fare-price {
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.fare-price-native {
+  font-size: 0.72rem;
+  color: var(--muted);
 }
 
 .fare-site-badge {

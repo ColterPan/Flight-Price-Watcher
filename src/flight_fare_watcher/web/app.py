@@ -10,10 +10,17 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 from flight_fare_watcher.config import get_settings
+from flight_fare_watcher.currency import ExchangeRateCache
 from flight_fare_watcher.logging_config import get_logger
 from flight_fare_watcher.scheduler.jobs import run_watch_check_job
 from flight_fare_watcher.search.cache import SearchCache
-from flight_fare_watcher.web import routes_health, routes_pages, routes_search, routes_watches
+from flight_fare_watcher.web import (
+    routes_currency,
+    routes_health,
+    routes_pages,
+    routes_search,
+    routes_watches,
+)
 
 logger = get_logger(__name__)
 
@@ -24,6 +31,7 @@ STATIC_DIR = Path(__file__).parent / "static"
 async def lifespan(app: FastAPI):
     settings = get_settings()
     app.state.search_cache = SearchCache(settings.search_cache_ttl_seconds)
+    app.state.exchange_rate_cache = ExchangeRateCache(settings.exchange_rate_cache_ttl_seconds)
 
     scheduler = AsyncIOScheduler()
     scheduler.add_job(
@@ -52,14 +60,17 @@ async def lifespan(app: FastAPI):
 
 def create_app() -> FastAPI:
     app = FastAPI(title="Flight Fare Watcher", lifespan=lifespan)
-    # A cache is also attached here so an app built without running its
+    # These caches are also attached here so an app built without running its
     # lifespan (as TestClient does for simple unit tests) still works.
-    app.state.search_cache = SearchCache(get_settings().search_cache_ttl_seconds)
+    settings = get_settings()
+    app.state.search_cache = SearchCache(settings.search_cache_ttl_seconds)
+    app.state.exchange_rate_cache = ExchangeRateCache(settings.exchange_rate_cache_ttl_seconds)
 
     app.include_router(routes_pages.router)
     app.include_router(routes_search.router)
     app.include_router(routes_watches.router)
     app.include_router(routes_health.router)
+    app.include_router(routes_currency.router)
     if STATIC_DIR.exists():
         app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
     return app

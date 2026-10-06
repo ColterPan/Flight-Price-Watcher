@@ -126,25 +126,9 @@ def test_check_watch_now_runs_a_real_check_and_updates_status(client, monkeypatc
         "/api/watches", json={"origin": "JFK", "destination": "LAX", "depart_date": DEPART}
     ).json()
 
-    from datetime import datetime
     from decimal import Decimal
 
-    from flight_fare_watcher.models.fare import FareResult
-    from flight_fare_watcher.search.orchestrator import SearchResponse
     from flight_fare_watcher.web import routes_watches as routes_watches_module
-
-    def fake_fare():
-        return FareResult(
-            site="demo",
-            origin="JFK",
-            destination="LAX",
-            depart_date=future_date(),
-            price=Decimal("222"),
-            currency="USD",
-            deep_link="https://example.com",
-            scraped_at=datetime.now(),
-            airline="Test Air",
-        )
 
     async def fake_check_watch(conn, watch, settings):
         from flight_fare_watcher.db import repository

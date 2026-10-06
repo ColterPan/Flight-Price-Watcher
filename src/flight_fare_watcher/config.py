@@ -49,6 +49,16 @@ class Settings(BaseSettings):
     #: on filters, and avoids hammering the source. 0 disables the cache.
     search_cache_ttl_seconds: float = Field(default=300.0, ge=0)
 
+    # --- currency conversion ---
+    #: Every fare provider prices in USD (see currency.py) - this only
+    #: controls which currency the UI shows by default; the user can switch
+    #: it from the results page without re-searching.
+    default_display_currency: str = "USD"
+    #: How long a fetched rate snapshot is treated as fresh before refetching.
+    #: Frankfurter/ECB rates update roughly once per weekday, so this is
+    #: about keeping the app responsive, not chasing intraday movement.
+    exchange_rate_cache_ttl_seconds: float = Field(default=3600.0, ge=0)
+
     # --- watch scheduler ---
     check_interval_hours: float = Field(default=4.0, gt=0)
 

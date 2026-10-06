@@ -61,15 +61,22 @@
 
   <div id="results-toolbar" class="results-toolbar" hidden>
     <span id="results-count"></span>
-    <label class="sort-control">
-      Sort by
-      <select id="sort-by">
-        <option value="price">Price (lowest first)</option>
-        <option value="duration">Duration (shortest first)</option>
-        <option value="depart">Departure time</option>
-      </select>
-    </label>
+    <div class="toolbar-controls">
+      <label class="sort-control">
+        Show prices in
+        <select id="display-currency"></select>
+      </label>
+      <label class="sort-control">
+        Sort by
+        <select id="sort-by">
+          <option value="price">Price (lowest first)</option>
+          <option value="duration">Duration (shortest first)</option>
+          <option value="depart">Departure time</option>
+        </select>
+      </label>
+    </div>
   </div>
+  <p id="currency-notice" class="currency-notice" hidden></p>
 
   <div id="results-list" class="results-list"></div>
   <p id="results-empty" class="empty-state" hidden>No fares found for that route and dates. Try different dates or fewer stops.</p>

@@ -13,6 +13,8 @@
   const listEl = document.getElementById("results-list");
   const emptyEl = document.getElementById("results-empty");
   const sortSelect = document.getElementById("sort-by");
+  const currencySelect = document.getElementById("display-currency");
+  const currencyNoticeEl = document.getElementById("currency-notice");
   const refreshButton = document.getElementById("search-refresh");
   const submitButton = document.getElementById("search-submit");
 
@@ -23,6 +25,34 @@
 
   let lastFares = [];
   let lastQuery = null;
+  // Rates are fetched once (base=USD, since every provider prices in USD)
+  // and reused for every currency the user picks afterward - switching is
+  // instant, no re-search needed. `null` means "not loaded yet or failed".
+  let rateSnapshot = null;
+  let displayCurrency = getPreferredCurrency();
+
+  async function initCurrencySelector() {
+    try {
+      rateSnapshot = await fetchExchangeRates("USD");
+      if (!(displayCurrency in rateSnapshot.supported_currencies)) displayCurrency = "USD";
+      populateCurrencySelect(currencySelect, rateSnapshot.supported_currencies, displayCurrency);
+      if (rateSnapshot.stale) {
+        showStatus(currencyNoticeEl, `Showing slightly older exchange rates (as of ${rateSnapshot.as_of}).`, "info");
+      }
+    } catch (err) {
+      // Live conversion is a convenience, not a requirement - fall back to
+      // USD-only and say so, rather than breaking currency display entirely.
+      populateCurrencySelect(currencySelect, { USD: "US Dollar" }, "USD");
+      displayCurrency = "USD";
+      showStatus(currencyNoticeEl, "Live exchange rates are unavailable right now - showing USD.", "error");
+    }
+  }
+
+  currencySelect.addEventListener("change", () => {
+    displayCurrency = currencySelect.value;
+    setPreferredCurrency(displayCurrency);
+    if (lastFares.length) renderResults(lastFares);
+  });
 
   document.getElementById("swap-airports").addEventListener("click", () => {
     const originValue = originInput.value;
@@ -158,16 +188,38 @@
     }
   }
 
-  function renderFareCard(fare) {
+  function renderFareCard(fare, isCheapest) {
     const card = document.createElement("article");
-    card.className = "fare-card";
+    card.className = "fare-card" + (isCheapest ? " cheapest" : "");
 
     const priceCol = document.createElement("div");
     priceCol.className = "fare-price-col";
+
+    if (isCheapest) {
+      const badge = document.createElement("span");
+      badge.className = "cheapest-badge";
+      badge.textContent = "Cheapest";
+      priceCol.appendChild(badge);
+    }
+
     const price = document.createElement("div");
     price.className = "fare-price";
-    price.textContent = formatMoney(fare.price, fare.currency);
-    priceCol.appendChild(price);
+    const nativePrice = parseFloat(fare.price);
+    const converted =
+      rateSnapshot && !Number.isNaN(nativePrice)
+        ? convertAmount(nativePrice, fare.currency, displayCurrency, rateSnapshot.rates, rateSnapshot.base)
+        : null;
+    if (converted !== null && displayCurrency !== fare.currency) {
+      price.textContent = `≈ ${formatMoney(converted, displayCurrency)}`;
+      const nativeNote = document.createElement("span");
+      nativeNote.className = "fare-price-native";
+      nativeNote.textContent = `${formatMoney(fare.price, fare.currency)} native price`;
+      priceCol.appendChild(price);
+      priceCol.appendChild(nativeNote);
+    } else {
+      price.textContent = formatMoney(fare.price, fare.currency);
+      priceCol.appendChild(price);
+    }
     const siteBadge = document.createElement("span");
     siteBadge.className = "fare-site-badge " + (fare.site === "demo" ? "demo" : "");
     siteBadge.textContent = siteLabel(fare.site);
@@ -249,7 +301,11 @@
     const watchButton = document.createElement("button");
     watchButton.type = "button";
     watchButton.className = "watch-button";
-    watchButton.textContent = `Watch - alert at $${fare.price}`;
+    // Always the native price/currency, even when a converted price is
+    // displayed above - that is what the watch actually compares against,
+    // and an alert threshold must never depend on which currency the
+    // viewer happened to have selected when they clicked this button.
+    watchButton.textContent = `Watch - alert at ${formatMoney(fare.price, fare.currency)}`;
     watchButton.addEventListener("click", () => handleWatchClick(watchButton, fare));
     actionCol.appendChild(watchButton);
 
@@ -260,8 +316,20 @@
   function renderResults(fares) {
     const sorted = sortFares(fares, sortSelect.value);
     listEl.textContent = "";
+
+    // "Cheapest" is always computed from the native price/currency,
+    // regardless of the currently selected display currency or sort order -
+    // switching currencies or sorting by duration must never change which
+    // fare is actually the best price. Skipped (no badge) if fares somehow
+    // came back in more than one native currency, since prices in different
+    // currencies aren't comparable as plain numbers.
+    const nativeCurrencies = new Set(fares.map((fare) => fare.currency));
+    const cheapestPrice =
+      nativeCurrencies.size === 1 ? Math.min(...fares.map((fare) => parseFloat(fare.price))) : null;
+
     for (const fare of sorted) {
-      listEl.appendChild(renderFareCard(fare));
+      const isCheapest = cheapestPrice !== null && parseFloat(fare.price) === cheapestPrice;
+      listEl.appendChild(renderFareCard(fare, isCheapest));
     }
   }
 
@@ -332,4 +400,6 @@
   });
 
   refreshButton.addEventListener("click", () => runSearch(true));
+
+  initCurrencySelector();
 })();

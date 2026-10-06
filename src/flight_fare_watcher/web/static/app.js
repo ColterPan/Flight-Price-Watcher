@@ -51,8 +51,111 @@ function formatPrice(value) {
   return Number.isInteger(num) ? String(num) : num.toFixed(2);
 }
 
+// Intl.NumberFormat knows each currency's real symbol, symbol placement,
+// thousands separators, and minor-unit decimal count (0 for JPY, 2 for USD,
+// etc.) - far more correct than hand-rolling currency formatting.
 function formatMoney(price, currency) {
-  return `$${formatPrice(price)} ${currency || "USD"}`;
+  const amount = typeof price === "number" ? price : parseFloat(price);
+  if (Number.isNaN(amount)) return `${formatPrice(price)} ${currency || "USD"}`;
+  try {
+    return new Intl.NumberFormat(undefined, {
+      style: "currency",
+      currency: currency || "USD",
+    }).format(amount);
+  } catch (err) {
+    // An unrecognized currency code (shouldn't happen - the server only ever
+    // sends codes from currency.py's SUPPORTED_CURRENCIES) falls back
+    // gracefully rather than breaking the whole fare card.
+    return `${formatPrice(price)} ${currency || "USD"}`;
+  }
+}
+
+// --- Live currency conversion -------------------------------------------
+//
+// Every fare provider prices in USD (see currency.py's module docstring).
+// This is purely a display conversion: it never touches the price actually
+// searched, sorted, or used to create a watch - only what the fare cards
+// render. Rates are fetched once per page load (cached here) and reused for
+// every currency the user picks, so switching currencies is instant.
+
+const DISPLAY_CURRENCY_STORAGE_KEY = "ffw_display_currency";
+// Mirrors currency.py::ZERO_DECIMAL_CURRENCIES - currencies conventionally
+// shown with no decimal places.
+const ZERO_DECIMAL_CURRENCIES = new Set(["JPY", "KRW", "HUF", "ISK"]);
+
+function getPreferredCurrency() {
+  try {
+    return localStorage.getItem(DISPLAY_CURRENCY_STORAGE_KEY) || "USD";
+  } catch (err) {
+    return "USD"; // private browsing / storage blocked - fall back quietly
+  }
+}
+
+function setPreferredCurrency(code) {
+  try {
+    localStorage.setItem(DISPLAY_CURRENCY_STORAGE_KEY, code);
+  } catch (err) {
+    // per-viewer convenience only; losing it just resets to USD next visit
+  }
+}
+
+async function fetchExchangeRates(base) {
+  const response = await fetch(`/api/exchange-rates?base=${encodeURIComponent(base || "USD")}`);
+  if (!response.ok) {
+    const body = await response.json().catch(() => ({}));
+    throw new Error(body.detail || `exchange rate request failed (${response.status})`);
+  }
+  const data = await response.json();
+  // The server sends each rate as a JSON string (it originates from a
+  // Decimal and strings round-trip exactly, unlike floats) - parse once here
+  // so every caller can just do arithmetic on `rates` without re-parsing.
+  const rates = {};
+  for (const [code, value] of Object.entries(data.rates || {})) {
+    const parsed = parseFloat(value);
+    if (!Number.isNaN(parsed)) rates[code] = parsed;
+  }
+  return { ...data, rates };
+}
+
+function roundForDisplay(amount, currency) {
+  return ZERO_DECIMAL_CURRENCIES.has(currency) ? Math.round(amount) : Math.round(amount * 100) / 100;
+}
+
+// `rates` holds "1 unit of `base` = rates[code] units of code" - the base
+// itself has no entry (Frankfurter never rates a currency against itself),
+// so look-ups treat a currency equal to `base` as an implicit rate of 1.
+function rateFor(currency, rates, base) {
+  if (currency === base) return 1;
+  const rate = rates && rates[currency];
+  return typeof rate === "number" && !Number.isNaN(rate) ? rate : null;
+}
+
+// Converts via `base` in both directions rather than assuming
+// `nativeCurrency` already *is* `base` - every fare today happens to be
+// priced in USD with rates fetched for base=USD, but this stays correct even
+// if that ever changes. Mirrors currency.py::convert() on the server.
+//
+// Returns `null` if either currency's rate is unknown - callers must fall
+// back to showing the native amount rather than display nothing or a wrong
+// number.
+function convertAmount(amountNative, nativeCurrency, displayCurrency, rates, base) {
+  if (nativeCurrency === displayCurrency) return amountNative;
+  const fromRate = rateFor(nativeCurrency, rates, base);
+  const toRate = rateFor(displayCurrency, rates, base);
+  if (fromRate === null || toRate === null || fromRate === 0) return null;
+  const amountInBase = amountNative / fromRate;
+  return roundForDisplay(amountInBase * toRate, displayCurrency);
+}
+
+function populateCurrencySelect(selectEl, supportedCurrencies, selectedCode) {
+  selectEl.textContent = "";
+  for (const [code, name] of Object.entries(supportedCurrencies)) {
+    const option = document.createElement("option");
+    option.value = code;
+    option.textContent = `${code} - ${name}`;
+    if (code === selectedCode) option.selected = true;
+    selectEl.appendChild(option);
+  }
 }
 
 const SITE_LABELS = {

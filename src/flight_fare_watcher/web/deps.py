@@ -8,6 +8,7 @@ from collections.abc import Generator
 from fastapi import Request
 
 from flight_fare_watcher.config import get_settings
+from flight_fare_watcher.currency import ExchangeRateCache
 from flight_fare_watcher.db.database import connect
 from flight_fare_watcher.search.cache import SearchCache
 
@@ -24,3 +25,8 @@ def get_db() -> Generator[sqlite3.Connection, None, None]:
 def get_search_cache(request: Request) -> SearchCache:
     """The app-wide search cache, created once in the app's lifespan."""
     return request.app.state.search_cache
+
+
+def get_exchange_rate_cache(request: Request) -> ExchangeRateCache:
+    """The app-wide exchange rate cache, created once in the app's lifespan."""
+    return request.app.state.exchange_rate_cache
